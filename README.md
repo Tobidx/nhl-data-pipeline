@@ -25,6 +25,7 @@ This project implements a data pipeline for processing NHL game and player data 
   Install the required Python packages using the requirements.txt file:
   ```bash
   pip install -r requirements.txt
+
 ---
 
 ## **Running the pipeline**
