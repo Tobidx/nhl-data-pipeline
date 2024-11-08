@@ -29,54 +29,70 @@ This project implements a data pipeline for processing NHL game and player data 
 3. Running the Pipeline
 To process a list of game IDs and update the dataset:
  ```bash
-  python src/dag_pipeline.py
+   python src/dag_pipeline.py
 
-Example
-Modify the dag_pipeline.py script to include game IDs to process:
+***Example***
+1. Modify the dag_pipeline.py script to include game IDs to process:
+```python
+  game_ids = ["2023020001", "2023020002"]
 
-python
-Copy code
-game_ids = ["2023020001", "2023020002"]
-Run the pipeline:
+2. Run the pipeline:
+```bash
+   python src/dag_pipeline.py
 
-bash
-Copy code
-python src/dag_pipeline.py
-Check the output:
+3. Check the output:
 
 The pipeline updates the CSV files in the data/ folder with new data fetched from the NHL API.
-Demonstration
+
+**Demonstration**
 Below is a demonstration of how the pipeline works:
 
-Input
-Sample game IDs: ["2023020001", "2023020002"]
-Original CSV files in the data/ folder.
-Execution
-Run the command:
-bash
-Copy code
-python src/dag_pipeline.py
-Process
-The pipeline:
+***Input***
+-Sample game IDs: ["2023020001", "2023020002"]
+-Original CSV files in the data/ folder.
 
-Loads existing data from data/ files.
-Fetches updated game data for the specified game IDs from the NHL API.
-Cleans and validates the data.
-Appends or updates the datasets.
-Outputs the updated files back into the data/ folder.
+***Execution***
 
-Output
-Updated data/game_overview.csv and other relevant files.
-New records are added, and existing records are updated based on the input game IDs.
-Example Output
-Before: data/game_overview.csv:
+-Run the command:
+```bash
+   python src/dag_pipeline.py
 
-Copy code
+***Process***
+
+1. The pipeline:
+
+-Loads existing data from data/ files.
+-Fetches updated game data for the specified game IDs from the NHL API.
+-Cleans and validates the data.
+-Appends or updates the datasets.
+-Outputs the updated files back into the data/ folder.
+
+***Output***
+
+-Updated data/game_overview.csv and other relevant files.
+-New records are added, and existing records are updated based on the input game IDs.
+
+***Example Output***
+
+-Before: data/game_overview.csv:
+```
 gameID,team,score
 2023020001,TOR,2
-After: data/game_overview.csv:
 
-Copy code
+-After: data/game_overview.csv:
+```
 gameID,team,score
-2023020001,TOR,3
+2023020001,TOR,2
 2023020002,BOS,4
+
+**Future Improvements**
+
+- Enhanced Validation:
+Integrate schema validation for stricter data quality checks.
+
+- Containerization:
+Package the pipeline in a Docker container for portability.
+
+-Scalability:
+Use distributed processing for larger datasets or higher workloads.
+
