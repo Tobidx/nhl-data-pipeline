@@ -13,7 +13,7 @@ This project implements a data pipeline for processing NHL game and player data 
 
 ### 1. Clone the Repository
 Clone the project repository from GitHub:
-`git clone https://github.com/your-username/nhl-data-pipeline.git`
+`git clone https://github.com/Tobidx/nhl-data-pipeline.git`
 `cd nhl-data-pipeline`
 
 ### 2. Install Dependencies
@@ -51,3 +51,9 @@ Before `data/game_overview.csv`:
 ```csv
 gameID,team,score
 2023020001,TOR,2
+
+After data/game_overview.csv:
+```csv
+gameID,team,score
+2023020001,TOR,2
+2023020002,BOS,4
