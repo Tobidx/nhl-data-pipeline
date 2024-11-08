@@ -20,7 +20,6 @@ This project implements a data pipeline for processing NHL game and player data 
 git clone https://github.com/your-username/nhl-data-pipeline.git
 cd nhl-data-pipeline
 
-
 ---
 
 ## **Setup Instructions**
