@@ -21,3 +21,12 @@ git clone https://github.com/your-username/nhl-data-pipeline.git
 cd nhl-data-pipeline
 
 
+---
+
+## **Setup Instructions**
+
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/your-username/nhl-data-pipeline.git
+cd nhl-data-pipeline
+
