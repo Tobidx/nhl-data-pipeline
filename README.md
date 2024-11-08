@@ -25,8 +25,10 @@ This project implements a data pipeline for processing NHL game and player data 
   Install the required Python packages using the requirements.txt file:
   ```bash
   pip install -r requirements.txt
+---
 
-3. Running the Pipeline
+## **Running the pipeline**
+
 To process a list of game IDs and update the dataset:
  ```bash
    python src/dag_pipeline.py
@@ -43,6 +45,7 @@ To process a list of game IDs and update the dataset:
 3. Check the output:
 
 The pipeline updates the CSV files in the data/ folder with new data fetched from the NHL API.
+---
 
 **Demonstration**
 Below is a demonstration of how the pipeline works:
@@ -67,6 +70,7 @@ Below is a demonstration of how the pipeline works:
 -Appends or updates the datasets.
 -Outputs the updated files back into the data/ folder.
 
+---
 ***Output***
 
 -Updated data/game_overview.csv and other relevant files.
@@ -85,6 +89,7 @@ gameID,team,score
 2023020001,TOR,2
 2023020002,BOS,4
 
+---
 **Future Improvements**
 
 - Enhanced Validation:
